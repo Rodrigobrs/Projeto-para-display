@@ -1,17 +1,17 @@
-const ListaSeleçãoCarros = document.querySelectorAll(".carro");
-ListaSeleçãoCarros.forEach(carro => { carro.addEventListener("click", () => {
-    const CartaoCarroAberto = document.querySelector(".aberto");
-    CartaoCarroAberto.classList.remove("aberto");
+const listaSeleçãoCarros = document.querySelectorAll(".carro");
+listaSeleçãoCarros.forEach(carro => { carro.addEventListener("click", () => {
+    const cartaoCarroAberto = document.querySelector(".aberto");
+    cartaoCarroAberto.classList.remove("aberto");
 
-    const IdCarroSelecionado = carro.attributes.id.value;
-    const IddoCartaoCarroParaabrir = "cartao-" + IdCarroSelecionado;
-    const CartaoCarroParaabrir = document.getElementById(IddoCartaoCarroParaabrir);
-    CartaoCarroParaabrir.classList.add("aberto");
+    const idCarroSelecionado = carro.attributes.id.value;
+    const idDoCartaoCarroParaAbrir = "cartao-" + idCarroSelecionado;
+    const cartaoCarroParaAbrir = document.getElementById(idDoCartaoCarroParaAbrir);
+    cartaoCarroParaAbrir.classList.add("aberto");
     
-    const CarroAtivoNaListagem = document.querySelector(".ativo");
-    CarroAtivoNaListagem.classList.remove("ativo");
+    const carroAtivoNaListagem = document.querySelector(".ativo");
+    carroAtivoNaListagem.classList.remove("ativo");
     
-    const CarroSeleionadoNaListagem = document.getElementById(IdCarroSelecionado);
-    CarroSeleionadoNaListagem.classList.add("ativo");
+    const carroSeleionadoNaListagem = document.getElementById(idCarroSelecionado);
+    carroSeleionadoNaListagem.classList.add("ativo");
     })
 })
